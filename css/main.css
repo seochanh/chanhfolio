@@ -1,0 +1,130 @@
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+}
+
+body {
+  background-color: #303030;
+  color: #fff;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'NanumSquare', sans-serif;
+}
+h1, h2, h3, h4 {
+  margin: 0;
+}
+a, a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+.title {
+  text-align: center;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 9.375em;
+}
+
+.menu {
+  /* position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; */
+  /* z-index: -1; */
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.menu__mode-box {
+  width: 100%;
+  height: 130px;
+}
+.menu__works-box {
+  width: 160px;
+}
+.menu__about-box {
+  width: 160px;
+}
+.menu__blog-box {
+  width: 100%;
+  height: 130px;
+}
+
+.menu h3 {
+  cursor: pointer;
+  font-size: 1.875em;
+  font-weight: 400;
+}
+.menu h3:hover {
+  color: #ffcc00;
+}
+
+/* .menu__mode {
+  position: absolute;
+  top: 0%; left: 50%;
+  transform: translateX(-50%);
+}
+
+.menu__blog-box {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 152px;
+}
+.menu__works {
+  position: absolute;
+  top: 50%; left: -50px;
+  transform: translateY(-50%) rotate(-90deg);
+}
+.menu__about {
+  position: absolute;
+  top: 50%; right: -50px;
+  transform: translateY(-50%) rotate(90deg);
+} */
+
+.about {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: auto;
+  left: -100%;
+  bottom: auto;
+  right: auto;
+  background: #4d606e;
+  transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.about.active {
+  left: 0%;
+  height: 200vh;
+}
+
+.works {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: auto;
+  left: 100%;
+  bottom: auto;
+  right: auto;
+  background: #7f4a88;
+  transition: all 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.works.active {
+  left: 0%;
+}
