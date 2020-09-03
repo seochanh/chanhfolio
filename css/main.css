@@ -5,6 +5,8 @@ html {
 }
 
 body {
+  background-color: #303030;
+  color: #fff;
   padding: 0;
   overflow: hidden;
   font-family: 'NanumSquare', sans-serif;
@@ -25,14 +27,14 @@ a, a:active {
   height: 100vh;
   top: auto;
   left: 100%;
-  bottom: auto;
   right: auto;
-  background-color: #7f4a88;
+  bottom: auto;
+  background-color: #ffcc00;
   -webkit-transition: all 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
 
-.works.active {
+.works--active {
   left: 0%;
   background-color: #303030;
 }
@@ -42,8 +44,9 @@ a, a:active {
   width: 100%;
   top: auto;
   left: -100%;
-  bottom: auto;
   right: auto;
+  bottom: auto;
+  background-color: #ffcc00;
   -webkit-transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
   text-align: center;
@@ -56,30 +59,20 @@ a, a:active {
           flex-flow: column;
 }
 
-.about article {
+.about__page {
   width: 100%;
   height: 100vh;
-  opacity: 0;
-  -webkit-transition: opacity 0.8s;
-  transition: opacity 0.8s;
+  display: table;
 }
 
-.about article.show {
-  opacity: 1;
+.about__text-box {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .about--active {
   left: 0%;
-}
-
-.about__main {
-  background-color: #ddd;
-  z-index: 1000;
-}
-
-.about__skills {
-  background-color: #222;
-  z-index: 1000;
+  background-color: #303030;
 }
 
 .title {
@@ -93,7 +86,6 @@ a, a:active {
 }
 
 .menu {
-  background-color: #ddd;
   width: 100%;
   height: 100vh;
   display: -webkit-box;

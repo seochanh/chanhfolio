@@ -3,49 +3,36 @@
   width: 100%;
   top: auto;
   left: -100%;
-  bottom: auto;
   right: auto;
-  // background-color: #4d606e;
+  bottom: auto;
+  background-color: $point-color;
   transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
-  // display: table;
   text-align: center;
   display: flex;
   flex-flow: column;
 
-  article {
+  
+
+  &__page {
     width: 100%;
     height: 100vh;
-    // display: table-cell;
-    // vertical-align: middle;
-    opacity: 0;
-    transition: opacity 0.8s;
+    display: table;
+    
+    // opacity: 0;
+    // transition: opacity 0.8s;
 
-    &.show {
-      opacity: 1;
-    }
+    // &.show {
+    //   opacity: 1;
+    // }
+  }
+
+  &__text-box {
+    display: table-cell;
+    vertical-align: middle;
   }
 
   &--active {
     left: 0%;
-    // background-color: $dark-bgc;
+    background-color: $dark-bgc;
   }
-
-  &__main {background-color: #ddd;
-  z-index: 1000;}
-  &__skills {background-color: #222;z-index: 1000;}
 }
-
-
-
-
-
-  
-// header
-//   background: linear-gradient(to top, grey, lightsalmon) fixed
-//   color: white
-  
-// section:nth-of-type(odd)
-//   background: linear-gradient(to top, wheat, cornsilk) fixed
-  
-// section:nth-of-type(even)
-//   background: linear-gradient(to top, tan, cornsilk) fixed
