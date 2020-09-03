@@ -1,5 +1,6 @@
-@import "works.min.css";
-@import "about.min.css";
+@import "common";
+@import "works";
+@import "about";
 
 // title
 .title {
@@ -12,6 +13,7 @@
 
 // menu
 .menu {
+  background-color: #ddd;
   width: 100%;
   height: 100vh;
   display: flex;
@@ -24,42 +26,35 @@
     align-items: center;
   }
 
+  &__mode-box,
+  &__blog-box {
+    width: 100%;
+    height: 130px;
+  }
+
+  &__works-box,
+  &__about-box {
+    width: 160px;
+    height: calc(100vh - 260px);
+  }
+
+  h3 {
+    cursor: pointer;
+    font-size: 1.875em;
+    font-weight: 400;
+
+    &:hover {
+      color: $point-color;
+    }
+  }
+
+  &__works {
+    transform: rotate(-90deg);
+  }
+  &__about {
+    transform: rotate(90deg);
+  }
 }
 
-.menu__mode-box,
-.menu__blog-box {
-  width: 100%;
-  height: 130px;
-}
-.menu__works-box,
-.menu__about-box {
-  width: 160px;
-  height: calc(100vh - 260px);
-}
-.menu__works-box.active,
-.menu__about-box.active {
-  width: 80px;
-}
-.menu__about-box {
-  width: 160px;
-}
-.menu__blog-box {
-  width: 100%;
-  height: 130px;
-}
 
-.menu h3 {
-  cursor: pointer;
-  font-size: 1.875em;
-  font-weight: 400;
-}
-.menu h3:hover {
-  color: #ffcc00;
-}
 
-.menu__works {
-  transform: rotate(-90deg);
-}
-.menu__about {
-  transform: rotate(90deg);
-}
