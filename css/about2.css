@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 .about {
   position: absolute;
   width: 100%;
@@ -7,12 +9,9 @@
   bottom: auto;
   right: auto;
   background: #4d606e;
-  -webkit-transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
 }
-
 .about.active {
   left: 0%;
   height: 200vh;
 }
-/*# sourceMappingURL=about.css.map */

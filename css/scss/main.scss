@@ -1,0 +1,65 @@
+@import "works.min.css";
+@import "about.min.css";
+
+// title
+.title {
+  text-align: center;
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  font-size: 9.375em;
+}
+
+// menu
+.menu {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  article {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
+.menu__mode-box,
+.menu__blog-box {
+  width: 100%;
+  height: 130px;
+}
+.menu__works-box,
+.menu__about-box {
+  width: 160px;
+  height: calc(100vh - 260px);
+}
+.menu__works-box.active,
+.menu__about-box.active {
+  width: 80px;
+}
+.menu__about-box {
+  width: 160px;
+}
+.menu__blog-box {
+  width: 100%;
+  height: 130px;
+}
+
+.menu h3 {
+  cursor: pointer;
+  font-size: 1.875em;
+  font-weight: 400;
+}
+.menu h3:hover {
+  color: #ffcc00;
+}
+
+.menu__works {
+  transform: rotate(-90deg);
+}
+.menu__about {
+  transform: rotate(90deg);
+}
