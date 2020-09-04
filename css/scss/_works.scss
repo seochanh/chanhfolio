@@ -6,8 +6,8 @@
     $b: auto
   );
   @include size (100%, 100vh);
+  @include page-transition;
   background-color: $point-color;
-  transition: all 0.9s cubic-bezier(0.645, 0.045, 0.355, 1);
   z-index: 1;
 
   &--active {

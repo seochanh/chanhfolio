@@ -7,7 +7,7 @@ function pageTransition(c) {
   const page = document.querySelector(`.${c}`),
         box = document.querySelector(`.menu__${c}-box`);
   page.classList.toggle(`${c}--active`);
-  box.classList.toggle(`.menu__${c}-box--active`);
+  box.classList.toggle(`menu__${c}-box--active`);
 }
 
 worksButton.addEventListener('click', function() {
