@@ -5,38 +5,78 @@
 // title
 .title {
   text-align: center;
-  position: absolute;
-  top: 50%; left: 50%;
-  transform: translateX(-50%) translateY(-50%);
   font-size: 9.375em;
+  @include position (
+    $t: 50%,
+    $l: 50%,
+    $x: -50%,
+    $y: -50%
+  );
 }
 
 // menu
 .menu {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  @include size (100%, 100vh);
+  position: relative;
 
   article {
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  &__mode-box,
-  &__blog-box {
-    width: 100%;
-    height: 130px;
-  }
+  &__mode-box {
+    @include position (
+      $t: 0,
+      $l: 50%,
+      $x: -50%
+    );
+    @include size (100%, 130px);
 
-  &__works-box,
+    &:hover {
+      align-items: flex-start;
+    }
+  }
+  &__works-box {
+    @include position (
+      $t: 50%,
+      $l: 0,
+      $y: -50%
+      );
+    @include size (160px, 100%);
+
+    &:hover {
+      justify-content: flex-start;
+    }
+  }
   &__about-box {
-    width: 160px;
-    height: calc(100vh - 260px);
-  }
+    @include position (
+      $t: 50%,
+      $r: 0,
+      $y: -50%
+    );
+    @include size (160px, 100%);
 
+    &:hover {
+      justify-content: flex-end;
+    }
+  }
+  &__blog-box {
+    @include position (
+      $l: 50%,
+      $b: 0,
+      $x: -50%
+    );
+    @include size (100%, 130px);
+    
+    &:hover {
+      align-items: flex-end;
+      height: 30vh;
+      background-color: #fff;
+    }
+  }
+      
   h3 {
     cursor: pointer;
     font-size: 1.875em;

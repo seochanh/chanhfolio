@@ -2,6 +2,30 @@ $dark-bgc: #303030;
 $dark-font: #fff;
 $point-color: #ffcc00;
 
+@mixin position(
+  $p: absolute,
+  $t: null,
+  $b: null,
+  $l: null,
+  $r: null,
+  $x: 0,
+  $y: 0
+) {
+  position: $p;
+  top: $t;
+  bottom: $b;
+  left: $l;
+  right: $r;
+  transform: translateX($x) translateY($y);
+}
+@mixin size(
+  $w: null,
+  $h: null
+) {
+  width: $w;
+  height: $h;
+}
+
 html {
   box-sizing: border-box;
   font-size: 16px;

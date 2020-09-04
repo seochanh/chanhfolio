@@ -5,9 +5,9 @@ const worksButton = document.querySelector(".menu__works");
 
 function pageTransition(c) {
   const page = document.querySelector(`.${c}`),
-        title = document.querySelector(`.menu__${c}-box`);
+        box = document.querySelector(`.menu__${c}-box`);
   page.classList.toggle(`${c}--active`);
-  title.classList.toggle(`${c}__title--active`);
+  box.classList.toggle(`.menu__${c}-box--active`);
 }
 
 worksButton.addEventListener('click', function() {

@@ -134,19 +134,20 @@ function scrollMouse(e) {
     target = target.closest(tag);
   };
   const prev = target.previousElementSibling,
-        next = target.nextElementSibling;
-
+        next = target.nextElementSibling,
+        nextChild = main.firstChild;
+  console.log(nextChild);
 
   if (e.deltaY < 0) { // Wheel scrolled up
     e.preventDefault
     scrollIt(prev, 800, 'easeInOutQuad');
     // e.target.classList.remove('show');
-    // prev.classList.add('show');
+    // prev.childNode.classList.add('show');
   } else if (e.deltaY > 0) { // Wheel scrolled down
     e.preventDefault
     scrollIt(next, 800, 'easeInOutQuad');
     // e.target.classList.remove('show');
-    // next.classList.add('show');
+    // nextChild.classList.add('show');
   } else {
     return false;
   }
