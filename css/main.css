@@ -21,6 +21,10 @@ a, a:active {
   text-decoration: none;
 }
 
+.hidden {
+  display: none;
+}
+
 .works {
   position: absolute;
   top: auto;
@@ -71,7 +75,7 @@ a, a:active {
   display: table;
 }
 
-.about__text-box {
+.about__wrapper {
   display: table-cell;
   vertical-align: middle;
 }
@@ -98,6 +102,16 @@ a, a:active {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   text-align: center;
+}
+
+.title__text {
+  position: relative;
+  z-index: 100;
+}
+
+.title--active {
+  position: relative;
+  z-index: 100;
 }
 
 .menu {
@@ -182,7 +196,7 @@ a, a:active {
 }
 
 .menu__works-box:hover {
-  width: 100%;
+  width: 50%;
   z-index: 10;
   background-color: #303030;
 }
@@ -194,8 +208,17 @@ a, a:active {
   color: #707070;
 }
 
+.menu__works-box:hover {
+  border-right: solid 1px #eee;
+}
+
 .menu__works-box--active {
   border-right: solid 1px #eee;
+}
+
+.menu__works-box--active:hover {
+  width: 80px;
+  border: none;
 }
 
 .menu__works-box--active h3 {
@@ -232,7 +255,7 @@ a, a:active {
 }
 
 .menu__about-box:hover {
-  width: 100%;
+  width: 50%;
   z-index: 10;
   background-color: #303030;
 }
@@ -242,6 +265,15 @@ a, a:active {
   z-index: 10;
   background-color: #303030;
   color: #707070;
+}
+
+.menu__about-box:hover {
+  border-left: solid 1px #eee;
+}
+
+.menu__about-box--active:hover {
+  width: 80px;
+  border: none;
 }
 
 .menu__about-box--active h3 {

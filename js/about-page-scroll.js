@@ -134,9 +134,7 @@ function scrollMouse(e) {
     target = target.closest(tag);
   };
   const prev = target.previousElementSibling,
-        next = target.nextElementSibling,
-        nextChild = main.firstChild;
-  console.log(nextChild);
+        next = target.nextElementSibling;
 
   if (e.deltaY < 0) { // Wheel scrolled up
     e.preventDefault

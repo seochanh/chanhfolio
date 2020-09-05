@@ -1,4 +1,5 @@
 @import "common";
+// @import "cursor";
 @import "works";
 @import "about";
 
@@ -10,12 +11,14 @@
     @include flex-center;
     flex-wrap: wrap;
     text-align: center;
-    // @include position(
-    //   $t: 50%,
-    //   $l: 50%,
-    //   $x: -50%,
-    //   $y: -50%
-    // );
+  }
+  &__text {
+    position: relative;
+    z-index: 100;
+  }
+  &--active {
+    position: relative;
+    z-index: 100;
   }
 }
 
@@ -40,23 +43,13 @@
 
   &__mode { // top
     &-box { 
-      // @include position ( 
-      //   $t: 0,
-      //   $l: 50%,
-      //   $x: -50%
-      // );
       @include size (100%, 130px);
       @include flex-center;
     }
   }
   
-  &__blog {
-    &-box { // bottom
-      // @include position ( 
-      //   $l: 50%,
-      //   $b: 0,
-      //   $x: -50%
-      // );
+  &__blog { // bottom
+    &-box { 
       @include size (100%, 130px);
       @include flex-center;
     }
@@ -66,20 +59,21 @@
     transform: rotate(-90deg);
 
     &-box {
-      // @include position ( 
-      //   $t: 50%,
-      //   $l: 0,
-      //   $y: -50%
-      // );
       @include size (160px, 100%);
       @include flex-center;
       justify-content: flex-start;
-      @include hover ($w: 100%);
+      @include hover ($w: 50%);
       @include active ($w: 80px);
 
+      &:hover {
+        border-right: solid 1px #eee;
+      }
       &--active {
         border-right: solid 1px #eee;
-
+        &:hover{
+          width: 80px;
+          border: none;
+        }
         h3 {
           transform: translateX(-25%) rotate(-90deg);
         }
@@ -91,20 +85,21 @@
     transform: rotate(90deg);
 
     &-box { 
-      // @include position ( 
-      //   $t: 50%,
-      //   $r: 0,
-      //   $y: -50%
-      // );
       order: 3;
       flex-grow: 0;
       @include size (160px, 100%);
       @include flex-center;
       justify-content: flex-end;
-      @include hover ($w: 100%);
+      @include hover ($w: 50%);
       @include active ($w: 80px);
-      
+      &:hover {
+        border-left: solid 1px #eee;
+      }
       &--active {
+        &:hover {
+          width: 80px;
+          border: none;
+        }
         h3 {
           transform: translateX(25%) rotate(90deg);
         }
@@ -123,6 +118,3 @@
     }
   }
 }
-
-
-

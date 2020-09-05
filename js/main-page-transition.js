@@ -1,7 +1,8 @@
 "use strict";
 
-const aboutButton = document.querySelector(".menu__about");
-const worksButton = document.querySelector(".menu__works");
+const aboutButton = document.querySelector(".menu__about"),
+      worksButton = document.querySelector(".menu__works"),
+      titleText = document.querySelector(".title__text");
 
 function pageTransition(c) {
   const page = document.querySelector(`.${c}`),
@@ -15,4 +16,6 @@ worksButton.addEventListener('click', function() {
 });
 aboutButton.addEventListener('click', function() {
   pageTransition('about');
+  title.classList.toggle(`title--active`);
+  titleText.classList.toggle('hidden');
 });
