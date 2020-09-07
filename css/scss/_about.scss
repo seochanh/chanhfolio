@@ -15,18 +15,77 @@
   
   &__page {
     @include size (100%, 100vh);
-    display: table;
+    @include flex-center;
+    // display: table;
   }
 
   &__wrapper {
-    display: table-cell;
-    vertical-align: middle;
+    width: 1000px;
+  }
 
-    // opacity: 0;
-    // transition: opacity 0.8s;
-    // &.show {
-    //   opacity: 1;
-    // }
+  &__skills {
+    @include flex-center;
+    flex-direction: column;
+
+    &-title {
+      font-size: 5.625em;
+      text-align: left;
+      width: 95%;
+      margin-bottom: 75px;
+    }
+
+    &-list {
+      font-size: 1.3em;
+      width: 95%;
+      display: flex;
+      justify-content: space-between;
+    }
+    &-item {
+      color: $dark-active;
+      cursor: pointer;
+
+      &:hover {
+        color: #fff;
+      }
+      &--active {
+        color: $point-color;
+      }
+    }
+
+    &-gauge-box {
+      $h: 37px;
+      @include size (95%, $h);
+      background-color: #fff;
+      border-radius: $h / 2;
+      margin: 30px 0;
+    }
+    &-gauge {
+      background-color: $point-color;
+      width: 100%;
+      $h : 37px; 
+      height: $h;
+      border-radius: $h / 2; 
+    }
+
+    &-text {
+      font-size: 1.125em;
+      display: none;
+      width: 95%;
+      text-align: left;
+
+      &--active {
+        display: block;
+      }
+    }
+  }
+  &__career {
+    &-title {
+      font-size: 5.625em;
+    }
+
+    &-text {
+      font-size: 1.625em;
+    }
   }
 
   &--active {

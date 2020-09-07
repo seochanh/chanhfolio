@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang='ko'>
+<html lang="ko">
 <head>
-  <meta charset='utf-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>chanh's portfolio</title>
 
   <!-- jquery -->
@@ -20,45 +20,58 @@
 
 <body>
   <div class="container">
+    <!-- about -->
     <section class="about">
       <article class="about__page about__main">
       </article>
       <article class="about__page">
         <div class="about__wrapper">
-          <h2 class="about__title">이걸 할 줄 알아요</h2>
-          <ul class="about__skills-list">
-            <li class="about__skills-item about__skills-item--active">HTML/CSS/LESS/SCSS</li>
-            <li class="about__skills-item">자바스크립트/제이쿼리</li>
-            <li class="about__skills-item">포토샵/일러스트레이터</li>
-            <li class="about__skills-item">어도비XD</li>
-            <li class="about__skills-item">인디자인</li>
-          </ul>
-          <p class="about__skills-text about__skills-text--active">나는 스킬입니다.</p>
-          <p class="about__skills-text">나는 스킬입니다.</p>
-          <p class="about__skills-text">나는 스킬입니다.</p>
-          <p class="about__skills-text">나는 스킬입니다.</p>
-          <p class="about__skills-text">나는 스킬입니다.</p>
+          <div class="about__skills">
+            <h2 class="about__skills-title">이걸 할 줄 알아요</h2>
+            <ul class="about__skills-list">
+              <li class="about__skills-item about__skills-item--active">HTML / CSS / LESS / SCSS</li>
+              <li class="about__skills-item">자바스크립트 / 제이쿼리</li>
+              <li class="about__skills-item">포토샵 / 일러스트레이터</li>
+              <li class="about__skills-item">어도비XD</li>
+              <li class="about__skills-item">인디자인</li>
+            </ul>
+            <div class="about__skills-gauge-box">
+              <div class="about__skills-gauge"></div>
+            </div>
+            <p class="about__skills-text about__skills-text--active">나는 스킬입니다.</p>
+            <p class="about__skills-text">나는 스킬입니다.</p>
+            <p class="about__skills-text">나는 스킬입니다.</p>
+            <p class="about__skills-text">나는 스킬입니다.</p>
+            <p class="about__skills-text">나는 스킬입니다.</p>
+          </div>
         </div>
       </article>
       <article class="about__page">
         <div class="about__wrapper">
-          <h2 class="about__title">이걸 했어요</h2>
-          <p class="about__text">반응형 UI/UX 웹퍼블리셔 전문가 양성과정 수료</p>
+          <div class="about__career">
+            <h2 class="about__career-title">이걸 했어요</h2>
+            <p class="about__career-text">반응형 UI/UX 웹퍼블리셔 전문가 양성과정 수료</p>
+          </div>
         </div>
       </article>
       <article class="about__page">
         <div class="about__wrapper">
-          <img src="#" alt="서찬희" class="about__me-image">
-          <ul class="about__me-list">
-            <li class="about__me-item">서찬희</li>
-            <li class="about__me-item">1995.06.01</li>
-            <li class="about__me-item">010-5091-8082</li>
-          </ul>
+          <div class="about__me">
+            <img src="#" alt="서찬희" class="about__me-image">
+            <ul class="about__me-list">
+              <li class="about__me-item">서찬희</li>
+              <li class="about__me-item">1995.06.01</li>
+              <li class="about__me-item">010-5091-8082</li>
+            </ul>
+          </div>
         </div>
       </article>
     </section>
+
+    <!-- works -->
     <section class="works"></section>
 
+    <!-- menu -->
     <section class="menu">
       <article class="menu__works-box">
         <h3 class="menu__works">나의 작업들</h3>
@@ -97,6 +110,7 @@
   <!-- <script type="text/javascript" src="js/cursor.js"></script> -->
   <script type="text/javascript" src="js/main-page-transition.js"></script>
   <script type="text/javascript" src="js/about-page-scroll.js"></script>
+  <script type="text/javascript" src="js/about-skills-list.js"></script>
 </body>
 </html>
 
