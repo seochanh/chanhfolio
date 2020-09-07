@@ -1,33 +1,22 @@
 "use strict";
 
-const skill = document.querySelectorAll('.about__skills-item');
-const skillIdx = 
+const skill = document.querySelectorAll('.about__skills-item'),
+      gauge = document.querySelector('.about__skills-gauge'),
+      gaugePercent = [95, 80, 85, 90, 75],
+      skillText = document.querySelectorAll('.about__skills-text');
 
-function clickSkill(i, c) {
-  skill[i].classList.remove(`${c}--active`);
-  skill[i].classList.toggle(`${c}--active`);
+function skillClick(idx) {
+  skill[idx].addEventListener('click', function() {
+    for(let i = 0; i < skill.length; i++) {
+      skill[i].classList.remove('about__skills-item--active');
+      skillText[i].classList.remove('about__skills-text--active');
+    }
+    skill[idx].classList.toggle('about__skills-item--active');
+    gauge.style.width = gaugePercent[idx] + '%';
+    skillText[idx].classList.toggle('about__skills-text--active')
+  });
 }
 
-skill[idx].addEventListener('click', function(idx) {
-  skill[idx].clickSkill('about__skills-item');
-});
-
-var li = document.querySelectorAll('li');
-
-function li_click(idx){
-    li[idx].onclick = function(){
-        console.log(idx);
-        if(li[idx].getAttribute('class')!='active'){
-            for(var i=0;i<li.length;i++){
-                li[i].removeAttribute('class');
-            }
-            li[idx].setAttribute('class', 'active');    
-        } else{
-            li[idx].removeAttribute('class');
-        }
-        
-    };
-}
-for(var i=0; i<li.length; i++){
-  li_click(i);
+for(let i = 0; i < skill.length; i++) {
+  skillClick(i);
 }
