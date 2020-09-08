@@ -88,6 +88,9 @@
     }
   }
   &__career {
+    @include flex-center;
+    flex-direction: column;
+    
     &-title {
       width: 95%;
       font-size: 5.625em;
