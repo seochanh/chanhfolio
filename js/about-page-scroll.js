@@ -1,5 +1,7 @@
 "use strict";
 
+const skillTarget = document.querySelector(".about__skills");
+
 function scrollIt(destination, duration = 200, easing = 'linear', callback) {
   // Predefine list of available timing functions
   // If you need more, tween js is full of great examples

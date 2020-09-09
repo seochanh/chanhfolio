@@ -18,6 +18,13 @@
   }
 }
 
+.logo {
+  position: absolute;
+  width: 140px;
+  left: 50px;
+  top: 40px;
+}
+
 // menu
 .menu {
   @include size (100%, 100vh);
