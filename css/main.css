@@ -2,6 +2,7 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 16px;
+  line-height: 1.5;
 }
 
 body {
@@ -167,7 +168,8 @@ a, a:active {
 .about__skills-text {
   font-size: 1.125em;
   display: none;
-  width: 95%;
+  width: 90%;
+  height: 81px;
   text-align: left;
 }
 
@@ -235,6 +237,7 @@ a, a:active {
 }
 
 .logo {
+  fill: #fc0;
   position: absolute;
   width: 140px;
   left: 50px;
