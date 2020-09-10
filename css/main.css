@@ -54,10 +54,20 @@ a, a:active {
 }
 
 .title__text {
-  margin-top: 90px;
-  font-size: 1.125em;
+  margin-top: 30px;
+  font-size: 1.3em;
+  word-spacing: 2em;
   position: relative;
   z-index: 100;
+}
+
+.title__text span {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.title__text span:hover {
+  color: #ffcc00;
 }
 
 .about {
@@ -212,8 +222,74 @@ a, a:active {
   background-color: #303030;
 }
 
+.about__me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about__me-image {
+  height: 100%;
+}
+
+.about__me-image-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50vh;
+  height: 50vh;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 50px;
+}
+
+.about__me-list {
+  text-align: left;
+}
+
+.about__me-name {
+  font-size: 3.125em;
+  line-height: 2;
+}
+
+.about__me-item {
+  font-size: 1.75em;
+}
+
+.logo {
+  height: 100%;
+}
+
+.logo--small {
+  height: 100%;
+  -webkit-transform: translateX(-75%);
+          transform: translateX(-75%);
+}
+
+.logo__link {
+  display: block;
+  height: 38px;
+  position: absolute;
+  left: 50px;
+  top: 40px;
+  z-index: 1000;
+}
+
 .title {
   font-size: 9.375em;
+  line-height: 1.2;
 }
 
 .title-box {
@@ -236,14 +312,6 @@ a, a:active {
   z-index: 100;
 }
 
-.logo {
-  fill: #fc0;
-  position: absolute;
-  width: 140px;
-  left: 50px;
-  top: 40px;
-}
-
 .menu {
   width: 100%;
   height: 100vh;
@@ -257,6 +325,7 @@ a, a:active {
 }
 
 .menu__center {
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -326,7 +395,7 @@ a, a:active {
 }
 
 .menu__works-box:hover {
-  width: 50%;
+  width: 25%;
   z-index: 10;
   background-color: #303030;
 }
@@ -362,12 +431,6 @@ a, a:active {
 }
 
 .menu__about-box {
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
   width: 160px;
   height: 100%;
   display: -webkit-box;
@@ -385,7 +448,7 @@ a, a:active {
 }
 
 .menu__about-box:hover {
-  width: 50%;
+  width: 25%;
   z-index: 10;
   background-color: #303030;
 }

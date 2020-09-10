@@ -3,9 +3,30 @@
 @import "works";
 @import "about";
 
+
+// logo
+.logo {
+  height: 100%;
+
+  &--small {
+    height: 100%;
+    transform: translateX(-75%);
+  }
+
+  &__link {
+    display: block;
+    height: 38px;
+    position: absolute;
+    left: 50px;
+    top: 40px;
+    z-index: 1000;
+  }
+}
+
 // title
 .title {
   font-size: 9.375em;
+  line-height: 1.2;
   
   &-box {
     @include flex-center;
@@ -18,14 +39,6 @@
   }
 }
 
-.logo {
-  fill: #fc0;
-  position: absolute;
-  width: 140px;
-  left: 50px;
-  top: 40px;
-}
-
 // menu
 .menu {
   @include size (100%, 100vh);
@@ -34,6 +47,7 @@
   position: relative;
   
   &__center {
+    height: 100vh;
     display: flex;
     flex-flow: column;
     justify-content: space-between;
@@ -66,7 +80,7 @@
       @include size (160px, 100%);
       @include flex-center;
       justify-content: flex-start;
-      @include hover ($w: 50%);
+      @include hover ($w: 25%);
       @include active ($w: 80px);
 
       &:hover {
@@ -89,16 +103,16 @@
     transform: rotate(90deg);
 
     &-box { 
-      order: 3;
-      flex-grow: 0;
       @include size (160px, 100%);
       @include flex-center;
       justify-content: flex-end;
-      @include hover ($w: 50%);
+      @include hover ($w: 25%);
       @include active ($w: 80px);
+
       &:hover {
         border-left: solid 1px #eee;
       }
+
       &--active {
         &:hover {
           width: 80px;

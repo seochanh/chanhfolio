@@ -1,8 +1,16 @@
 .title__text {
-  margin-top: 90px;
-  font-size: 1.125em;
+  margin-top: 30px;
+  font-size: 1.3em;
+  word-spacing: 2em;
   position: relative;
   z-index: 100;
+
+  span {
+    transition: 0.3s;
+  }
+  span:hover {
+    color: $point-color;
+  }
 }
 
 .about {
@@ -110,5 +118,34 @@
   &--active {
     left: 0%;
     background-color: $dark-bgc;
+  }
+
+  &__me {
+    @include flex-center;
+
+    &-image {
+      height: 100%;
+
+      &-box {
+        @include flex-center;
+        @include size(50vh, 50vh);
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 50px;
+      }
+    }
+
+    &-list {
+      text-align: left;
+    }
+    
+    &-name {
+      font-size: 3.125em;
+      line-height: 2;
+    }
+
+    &-item {
+      font-size: 1.75em;
+    }
   }
 }
