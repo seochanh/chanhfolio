@@ -46,11 +46,69 @@ a, a:active {
   transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
   background-color: #ffcc00;
   z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .works--active {
   left: 0%;
   background-color: #303030;
+}
+
+.works__list {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-left: 80px;
+  height: 100vh;
+  border-right: solid 1px #eee;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  counter-reset: section 0;
+}
+
+.works__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 5.563em;
+  position: relative;
+}
+
+.works__item::before {
+  counter-increment: section 1;
+  content: "0" counter(section);
+  font-size: 0.337em;
+}
+
+.works__work {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.works__work-list {
+  -webkit-box-flex: 3;
+      -ms-flex-positive: 3;
+          flex-grow: 3;
+}
+
+.works__title {
+  font-size: 4.375em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.works__title span {
+  font-size: 0.429em;
 }
 
 .title__text {

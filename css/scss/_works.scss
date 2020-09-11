@@ -9,11 +9,51 @@
   @include page-transition;
   background-color: $point-color;
   z-index: 1;
+  display: flex;
 
   &--active {
     left: 0%;
     background-color: $dark-bgc;
   }
 
-  
+  &__list {
+    box-sizing: border-box;
+    padding-left: 80px;
+    height: 100vh;
+    border-right: solid 1px #eee;
+    flex-grow: 1;
+    counter-reset: section 0;
+  }
+  &__item {
+    display: flex;
+    font-size: 5.563em;
+    position: relative;
+
+    &::before {
+      counter-increment: section 1;
+      content: "0"counter(section);
+      font-size: 0.337em;
+    }
+  }
+
+
+  &__work {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-list {
+      flex-grow: 3;
+    }
+  }
+
+  &__title {
+    font-size: 4.375em;
+    display: flex;
+    
+    
+    span {
+      font-size: 0.429em;
+    }
+  }
 }
