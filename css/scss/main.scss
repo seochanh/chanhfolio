@@ -14,11 +14,21 @@
   }
 
   &__link {
+    @include position ($l: 50px, $t: 40px);
     display: block;
     height: 38px;
-    position: absolute;
-    left: 50px;
-    top: 40px;
+    z-index: 1000;
+  }
+}
+
+// menu button
+.menu-button {
+  height: 100%;
+
+  &__link {
+    @include position ($r: 50px, $t: 40px);
+    display: block;
+    height: 35px;
     z-index: 1000;
   }
 }

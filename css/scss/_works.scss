@@ -18,42 +18,59 @@
 
   &__list {
     box-sizing: border-box;
-    padding-left: 80px;
+    margin-left: 80px;
     height: 100vh;
     border-right: solid 1px #eee;
     flex-grow: 1;
     counter-reset: section 0;
+    padding: 5%;
   }
   &__item {
+    @include font (500, 4em);
     display: flex;
-    font-size: 5.563em;
     position: relative;
 
     &::before {
+      position: relative;
+      top: 10px; right: 10px;
       counter-increment: section 1;
       content: "0"counter(section);
-      font-size: 0.337em;
+      font-size: 0.328em;
     }
   }
-
 
   &__work {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 10px 0;
+    border-bottom: solid 1px #707070;
 
     &-list {
       flex-grow: 3;
+      padding: 5%;
+    }
+  }
+  
+  &__title {
+    @include font (400, 3.2em);
+    display: flex;
+    text-indent: 10px;
+    flex-grow: 1;
+    
+    span {
+      font-size: 0.328em;
+      position: relative;
+      top: 3px;
     }
   }
 
-  &__title {
-    font-size: 4.375em;
-    display: flex;
-    
-    
-    span {
-      font-size: 0.429em;
+  &__explanation {
+    flex-grow: 1;
+
+    &-title {
+      font-size: 1.125em;
+      font-weight: 800;
     }
   }
 }

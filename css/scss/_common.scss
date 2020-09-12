@@ -59,6 +59,15 @@ $point-color: #ffcc00;
     color: $dark-active;
   }
 }
+@mixin font (
+  $w: null,
+  $s: null,
+  $f: 's-core-dream'
+) {
+  font-weight: $w;
+  font-size: $s;
+  font-family: $f;
+}
 
 html {
   box-sizing: border-box;
