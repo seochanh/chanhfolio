@@ -1,0 +1,75 @@
+// Color
+$dark-bgc: #303030;
+$dark-font: #fff;
+$dark-active: #707070;
+$point-color: #ffcc00;
+
+// Media Query
+$mobile: "Only screen and ()"
+$desktop: "screen and ()"
+
+@mixin page-transition {
+  transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin position (
+  $p: absolute,
+  $t: null,
+  $b: null,
+  $l: null,
+  $r: null,
+  $x: 0,
+  $y: 0
+) {
+  position: $p;
+  top: $t;
+  bottom: $b;
+  left: $l;
+  right: $r;
+  transform: translateX($x) translateY($y);
+}
+@mixin size (
+  $w: null,
+  $h: null,
+) {
+  width: $w;
+  height: $h;
+}
+@mixin hover (
+  $w: null,
+  $h: null,
+  $z: 10
+) {
+  &:hover {
+    width: $w;
+    height: $h;
+    z-index: $z;
+    background-color: $dark-bgc;
+  }
+}
+@mixin active (
+  $w: null,
+  $h: null,
+  $z: 10
+) {
+  &--active {
+    width: $w;
+    height: $h;
+    z-index: $z;
+    background-color: $dark-bgc;
+    color: $dark-active;
+  }
+}
+@mixin font (
+  $w: null,
+  $s: null,
+  $f: 's-core-dream'
+) {
+  font-weight: $w;
+  font-size: $s;
+  font-family: $f;
+}

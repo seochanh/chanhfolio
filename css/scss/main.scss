@@ -1,3 +1,4 @@
+@import "variables";
 @import "common";
 // @import "cursor";
 @import "works";
@@ -40,8 +41,7 @@
   
   &-box {
     @include flex-center;
-    flex-wrap: wrap;
-    text-align: center;
+    flex-direction: column;
   }
   &--active {
     position: relative;
