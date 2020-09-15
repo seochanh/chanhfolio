@@ -5,6 +5,12 @@ html {
   line-height: 1.5;
 }
 
+@media (max-width: 767px) {
+  html {
+    font-size: 14px;
+  }
+}
+
 body {
   background-color: #303030;
   color: #fff;
@@ -51,6 +57,12 @@ a, a:active {
   display: flex;
 }
 
+@media (max-width: 767px) {
+  .works {
+    padding-top: 80px;
+  }
+}
+
 .works--active {
   left: 0%;
   background-color: #303030;
@@ -67,6 +79,12 @@ a, a:active {
           flex-grow: 1;
   counter-reset: section 0;
   padding: 5%;
+}
+
+@media (max-width: 767px) {
+  .works__list {
+    display: none;
+  }
 }
 
 .works__item {
@@ -122,6 +140,12 @@ a, a:active {
           flex-grow: 1;
 }
 
+@media (max-width: 767px) {
+  .works__title {
+    font-size: 2.5em;
+  }
+}
+
 .works__title span {
   font-size: 0.328em;
   position: relative;
@@ -145,6 +169,9 @@ a, a:active {
   word-spacing: 2em;
   position: relative;
   z-index: 100;
+  text-align: justify;
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
 }
 
 .title__text span {
@@ -154,6 +181,14 @@ a, a:active {
 
 .title__text span:hover {
   color: #ffcc00;
+}
+
+@media (max-width: 767px) {
+  .title__text {
+    font-size: 1.3em;
+    word-spacing: 0;
+    text-align: center;
+  }
 }
 
 .about {
@@ -197,6 +232,12 @@ a, a:active {
   width: 1000px;
 }
 
+@media (max-width: 767px) {
+  .about__wrapper {
+    width: 80%;
+  }
+}
+
 .about__skills {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -220,6 +261,13 @@ a, a:active {
   margin-bottom: 75px;
 }
 
+@media (max-width: 767px) {
+  .about__skills-title {
+    font-size: 4em;
+    margin-bottom: 30px;
+  }
+}
+
 .about__skills-list {
   font-size: 1.3em;
   width: 95%;
@@ -229,6 +277,12 @@ a, a:active {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  .about__skills-list {
+    font-size: 1em;
+  }
 }
 
 .about__skills-item {
@@ -296,11 +350,24 @@ a, a:active {
   margin-bottom: 75px;
 }
 
+@media (max-width: 767px) {
+  .about__career-title {
+    font-size: 4em;
+    margin-bottom: 30px;
+  }
+}
+
 .about__career-text {
   width: 95%;
   font-size: 1.625em;
   text-align: left;
   margin-bottom: 20px;
+}
+
+@media (max-width: 767px) {
+  .about__career-text {
+    font-size: 1.3em;
+  }
 }
 
 .about--active {
@@ -320,8 +387,18 @@ a, a:active {
           align-items: center;
 }
 
+@media (max-width: 767px) {
+  .about__me {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .about__me-image {
   height: 100%;
+  text-align: center;
 }
 
 .about__me-image-box {
@@ -341,17 +418,31 @@ a, a:active {
   margin-right: 50px;
 }
 
+@media (max-width: 767px) {
+  .about__me-image-box {
+    width: 30vh;
+    height: 30vh;
+    margin: 0 0 30px;
+  }
+}
+
 .about__me-list {
   text-align: left;
 }
 
+@media (max-width: 767px) {
+  .about__me-list {
+    text-align: center;
+  }
+}
+
 .about__me-name {
-  font-size: 3.125em;
+  font-size: 3em;
   line-height: 2;
 }
 
 .about__me-item {
-  font-size: 1.75em;
+  font-size: 1.5em;
 }
 
 .logo {
@@ -375,6 +466,12 @@ a, a:active {
   z-index: 1000;
 }
 
+@media (max-width: 767px) {
+  .logo {
+    height: 16px;
+  }
+}
+
 .menu-button {
   height: 100%;
 }
@@ -390,9 +487,22 @@ a, a:active {
   z-index: 1000;
 }
 
+@media (max-width: 767px) {
+  .menu-button__link {
+    height: 16px;
+  }
+}
+
 .title {
-  font-size: 9.375em;
+  font-size: 9em;
   line-height: 1.2;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .title {
+    font-size: 5em;
+  }
 }
 
 .title-box {
@@ -414,6 +524,8 @@ a, a:active {
 .title--active {
   position: relative;
   z-index: 100;
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
 }
 
 .menu {
@@ -446,6 +558,12 @@ a, a:active {
   -webkit-transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.7s cubic-bezier(0.645, 0.045, 0.355, 1);
   position: relative;
+}
+
+@media (max-width: 767px) {
+  .menu__mode {
+    display: none;
+  }
 }
 
 .menu__mode-box {
@@ -527,6 +645,12 @@ a, a:active {
 .menu__works-box--active h3 {
   -webkit-transform: translateX(-25%) rotate(-90deg);
           transform: translateX(-25%) rotate(-90deg);
+}
+
+@media (max-width: 767px) {
+  .menu__works-box--active {
+    display: none;
+  }
 }
 
 .menu__about {

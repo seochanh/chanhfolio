@@ -4,12 +4,20 @@
   word-spacing: 2em;
   position: relative;
   z-index: 100;
+  text-align: justify;
+  transform: translateX(-20px);
 
   span {
     transition: 0.3s;
   }
   span:hover {
     color: $point-color;
+  }
+
+  @include mobile {
+    font-size: 1.3em;
+    word-spacing: 0;
+    text-align: center;
   }
 }
 
@@ -36,6 +44,10 @@
 
   &__wrapper {
     width: 1000px;
+
+    @include mobile {
+      width: 80%;
+    }
   }
 
   &__skills {
@@ -47,6 +59,11 @@
       text-align: left;
       width: 95%;
       margin-bottom: 75px;
+
+      @include mobile {
+        font-size: 4em;
+        margin-bottom: 30px;
+      }
     }
 
     &-list {
@@ -54,6 +71,10 @@
       width: 95%;
       display: flex;
       justify-content: space-between;
+
+      @include mobile {
+        font-size: 1em;
+      }
     }
     &-item {
       color: $dark-active;
@@ -105,6 +126,11 @@
       font-size: 5.625em;
       text-align: left;
       margin-bottom: 75px;
+
+      @include mobile {
+        font-size: 4em;
+        margin-bottom: 30px;
+      }
     }
 
     &-text {
@@ -112,6 +138,10 @@
       font-size: 1.625em;
       text-align: left;
       margin-bottom: 20px;
+
+      @include mobile {
+        font-size: 1.3em;
+      }
     }
   }
 
@@ -123,8 +153,13 @@
   &__me {
     @include flex-center;
 
+    @include mobile {
+      flex-direction: column;
+    }
+
     &-image {
       height: 100%;
+      text-align: center;
 
       &-box {
         @include flex-center;
@@ -132,20 +167,29 @@
         border-radius: 50%;
         overflow: hidden;
         margin-right: 50px;
+
+        @include mobile {
+          @include size(30vh, 30vh);
+          margin: 0 0 30px;
+        }
       }
     }
 
     &-list {
       text-align: left;
+
+      @include mobile {
+        text-align: center;
+      }
     }
     
     &-name {
-      font-size: 3.125em;
+      font-size: 3em;
       line-height: 2;
     }
 
     &-item {
-      font-size: 1.75em;
+      font-size: 1.5em;
     }
   }
 }

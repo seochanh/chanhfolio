@@ -20,6 +20,10 @@
     height: 38px;
     z-index: 1000;
   }
+
+  @include mobile {
+    height: 16px;
+  }
 }
 
 // menu button
@@ -31,14 +35,23 @@
     display: block;
     height: 35px;
     z-index: 1000;
+
+    @include mobile {
+      height: 16px;
+    }
   }
 }
 
 // title
 .title {
-  font-size: 9.375em;
+  font-size: 9em;
   line-height: 1.2;
+  text-align: center;
   
+  @include mobile {
+    font-size: 5em;
+  }
+
   &-box {
     @include flex-center;
     flex-direction: column;
@@ -46,6 +59,8 @@
   &--active {
     position: relative;
     z-index: 100;
+
+    transform: translateX(-20px);
   }
 }
 
@@ -70,6 +85,10 @@
 
 
   &__mode { // top
+    @include mobile {
+      display: none;
+    }
+
     &-box { 
       @include size (100%, 130px);
       @include flex-center;
@@ -104,6 +123,10 @@
         }
         h3 {
           transform: translateX(-25%) rotate(-90deg);
+        }
+
+        @include mobile {
+          display: none;
         }
       }
     }
