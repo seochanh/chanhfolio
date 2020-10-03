@@ -1,0 +1,195 @@
+.title__text {
+  margin-top: 30px;
+  font-size: 1.3em;
+  word-spacing: 2em;
+  position: relative;
+  z-index: 100;
+  text-align: justify;
+  transform: translateX(-20px);
+
+  span {
+    transition: 0.3s;
+  }
+  span:hover {
+    color: $point-color;
+  }
+
+  @include mobile {
+    font-size: 1.3em;
+    word-spacing: 0;
+    text-align: center;
+  }
+}
+
+.about {
+  @include position (
+    $t: auto,
+    $l: -100%,
+    $r: auto,
+    $b: auto
+  );
+  @include page-transition;
+  width: 100%;
+  background-color: $point-color;
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  z-index: 1;
+  
+  &__page {
+    @include size (100%, 100vh);
+    @include flex-center;
+    // display: table;
+  }
+
+  &__wrapper {
+    width: 1000px;
+
+    @include mobile {
+      width: 80%;
+    }
+  }
+
+  &__skills {
+    @include flex-center;
+    flex-direction: column;
+
+    &-title {
+      font-size: 5.625em;
+      text-align: left;
+      width: 95%;
+      margin-bottom: 75px;
+
+      @include mobile {
+        font-size: 4em;
+        margin-bottom: 30px;
+      }
+    }
+
+    &-list {
+      font-size: 1.3em;
+      width: 95%;
+      display: flex;
+      justify-content: space-between;
+
+      @include mobile {
+        font-size: 1em;
+      }
+    }
+    &-item {
+      color: $dark-active;
+      cursor: pointer;
+
+      &:hover {
+        color: #fff;
+      }
+      &--active {
+        color: $point-color;
+      }
+    }
+
+    &-gauge {
+      @include page-transition;
+      background-color: $point-color;
+      width: 95%;
+      $h : 37px; 
+      height: $h;
+      border-radius: $h / 2; 
+
+      &-box {
+        $h: 37px;
+        @include size (95%, $h);
+        background-color: #fff;
+        border-radius: $h / 2;
+        margin: 30px 0;
+      }
+    }
+
+    &-text {
+      font-size: 1.125em;
+      display: none;
+      width: 90%;
+      height: 81px;
+      text-align: left;
+
+      &--active {
+        display: block;
+      }
+    }
+  }
+  &__career {
+    @include flex-center;
+    flex-direction: column;
+    
+    &-title {
+      width: 95%;
+      font-size: 5.625em;
+      text-align: left;
+      margin-bottom: 75px;
+
+      @include mobile {
+        font-size: 4em;
+        margin-bottom: 30px;
+      }
+    }
+
+    &-text {
+      width: 95%;
+      font-size: 1.625em;
+      text-align: left;
+      margin-bottom: 20px;
+
+      @include mobile {
+        font-size: 1.3em;
+      }
+    }
+  }
+
+  &--active {
+    left: 0%;
+    background-color: $dark-bgc;
+  }
+
+  &__me {
+    @include flex-center;
+
+    @include mobile {
+      flex-direction: column;
+    }
+
+    &-image {
+      height: 100%;
+      text-align: center;
+
+      &-box {
+        @include flex-center;
+        @include size(50vh, 50vh);
+        border-radius: 50%;
+        overflow: hidden;
+        margin-right: 50px;
+
+        @include mobile {
+          @include size(30vh, 30vh);
+          margin: 0 0 30px;
+        }
+      }
+    }
+
+    &-list {
+      text-align: left;
+
+      @include mobile {
+        text-align: center;
+      }
+    }
+    
+    &-name {
+      font-size: 3em;
+      line-height: 2;
+    }
+
+    &-item {
+      font-size: 1.5em;
+    }
+  }
+}
