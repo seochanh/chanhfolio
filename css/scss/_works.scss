@@ -46,6 +46,10 @@
       content: "0"counter(section);
       font-size: 0.328em;
     }
+
+    &:hover {
+      color: $point-color;
+    }
   }
 
   &__work {
