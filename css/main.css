@@ -124,6 +124,10 @@ a, a:active, a:hover {
   border-bottom: solid 1px #707070;
 }
 
+.works__work:hover {
+  color: #ffcc00;
+}
+
 .works__work-list {
   -webkit-box-flex: 3;
       -ms-flex-positive: 3;
